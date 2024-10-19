@@ -1,0 +1,8 @@
+orderTable=
+SELECT CustomerID,sum(orderAmount) AS "TotalSpent"
+FROM Orders
+WHERE customerID;
+
+SELECT customerName, TotalSpent
+FROM Customers c, orderTable o
+where c.CustomerID=o.CustomerID
